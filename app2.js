@@ -2,7 +2,7 @@ const express = require('express');
 const app2= express();
 
 app2.get('/client',(req,res)=>{
-    res.send('Espacio para el Front-end')
+    res.send('Front-end')
 })
 
 app2.listen(3002,()=>{
