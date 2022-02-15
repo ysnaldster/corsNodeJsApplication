@@ -3,6 +3,7 @@ const request = require('request');
 const cors = require('cors'); //Permisos CORS para el Proxy 
 const app = express();
 
+const port = process.env.PORT || 3000;
 app.use(cors());
 
 function randomNumber(min, max) {
@@ -17,7 +18,7 @@ app.get('/', (req,res) => {
     request(url).pipe(res);
 })
 
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log('Servidor Running');
 });
 
